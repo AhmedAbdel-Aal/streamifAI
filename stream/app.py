@@ -37,7 +37,7 @@ if picture:
     except Exception as e:
         msg = "problem with recommender" + str(e)
 
-base_path = Path(__file__)
+base_path = Path(__file__).parent
 base_path, vector, rec, msg
     
 
