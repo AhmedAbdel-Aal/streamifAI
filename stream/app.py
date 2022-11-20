@@ -34,8 +34,8 @@ if picture:
     try:
         pubinput=[['the lord of the rings: the two towers',0.2],['the lord of the rings: the two towers',0.7],['the lord of the rings: the two towers',0.1]]
         rec=recommendation(vector,'')   
-    except :
-        msg = "problem with recommender"
+    except Exception, e:
+        msg = "problem with recommender" + str(e)
 
 
 vector, rec, msg
