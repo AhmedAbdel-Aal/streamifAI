@@ -1,5 +1,6 @@
 import boto3
 import base64
+import streamlit as st
 
 def save_img(base):
     #open text file
@@ -22,8 +23,8 @@ def save_img(base):
         f.write(imgdata)
 
 def recognize():
-    rekognition = boto3.client('rekognition',aws_access_key_id='**',
-                 aws_secret_access_key='**', region_name='**')
+    rekognition = boto3.client('rekognition',aws_access_key_id=st.secrets["keys"]["aws_access_key_id"],
+                 aws_secret_access_key=st.secrets["keys"]["aws_secret_access_key"], region_name=st.secrets["keys"]["region_name"])
 
     with open('some_image.jpg', 'rb') as image_data:
          response_content = image_data.read()
