@@ -8,7 +8,7 @@ import pandas as pd
 from aws import get_data_2
 from recommender import recommendation
 from PIL import Image
-
+from pathlib import Path
 
 
 #opening the image
@@ -37,7 +37,7 @@ if picture:
     except Exception as e:
         msg = "problem with recommender" + str(e)
 
-
-vector, rec, msg
+base_path = Path(__file__)
+base_path, vector, rec, msg
     
 
