@@ -38,6 +38,6 @@ if picture:
         msg = "problem with recommender" + str(e)
 
 base_path = Path(__file__).parent
-base_path, vector, rec, msg
+base_path,Path(base_path, "clean_data.csv"), vector, rec, msg
     
 
