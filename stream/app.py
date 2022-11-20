@@ -12,10 +12,10 @@ from PIL import Image
 
 
 #opening the image
-image = Image.open('./logo-black.png')
+logo = "https://raw.githubusercontent.com/AhmedAbdel-Aal/streamifAI/main/stream/logo-black.png"
 
 #displaying the image on streamlit app
-st.image(image, caption='Enter any caption here')
+st.image(logo)
 
 
 
