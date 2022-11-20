@@ -38,6 +38,6 @@ if picture:
         msg = "problem with recommender"
 
 
-vector, rec
+vector, rec, msg
     
 
