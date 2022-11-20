@@ -12,7 +12,7 @@ from PIL import Image
 
 
 #opening the image
-image = Image.open('logo-black.png')
+image = Image.open('./logo-black.png')
 
 #displaying the image on streamlit app
 st.image(image, caption='Enter any caption here')
