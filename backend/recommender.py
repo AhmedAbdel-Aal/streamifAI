@@ -167,7 +167,7 @@ def recommendation(query,movie_entry):
     X=[df_no_rating[[c for c in df_no_rating.columns]].replace(np.nan,0).to_numpy() for i in range(len(y))]
     what_to_pop=[]
     for i in range(len(y)):
-        regressor = GradientBoostingRegressor(n_estimators= 10, min_samples_split = 10, min_samples_leaf=5, max_depth=5, verbose= 2)
+        regressor = GradientBoostingRegressor(n_estimators= 1, min_samples_split = 2, min_samples_leaf=1, max_depth=1, verbose= 1)
         regressor = deepcopy(regressor)
         regressor.fit(X[i], y[i])
         feature_importance = regressor.feature_importances_
