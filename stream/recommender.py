@@ -130,12 +130,9 @@ def recommendation(query,movie_entry):
     file1 = Path(base_path, "clean_data.csv")
     file2 = Path(base_path, "clean_numerical_data.csv")
     file3= Path(base_path, "clean_no_rating_data.csv")
-    if file1.is_file() and file2.is_file() and file3.is_file():
-        df = pd.read_csv(r'{}'.format(file1), thousands=',')
-        df_num = pd.read_csv(r'{}'.format(file2), thousands=',')
-        df_no_rating = pd.read_csv(r'{}'.format(file3), thousands=',')
-    else:
-        df,df_num,df_no_rating=prepare_dataframe('ap.json','IMDb movies.csv','IMDb ratings.csv')
+    df = pd.read_csv(r'{}'.format(file1), thousands=',')
+    df_num = pd.read_csv(r'{}'.format(file2), thousands=',')
+    df_no_rating = pd.read_csv(r'{}'.format(file3), thousands=',')
     query_vector=[[(element['age_range_high']+element['age_range_low'])/2,str.lower(element['gender'])] for element in query]
     for s in query_vector:
         if s[0]<18:

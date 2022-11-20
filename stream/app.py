@@ -38,6 +38,10 @@ if picture:
         msg = "problem with recommender" + str(e)
 
 base_path = Path(__file__).parent
+file1 = Path(base_path, "clean_data.csv")
+file2 = Path(base_path, "clean_numerical_data.csv")
+file3= Path(base_path, "clean_no_rating_data.csv")
+
 base_path,Path(base_path, "clean_data.csv"),Path(base_path, "clean_data.csv").is_file(), vector, rec, msg
     
 
