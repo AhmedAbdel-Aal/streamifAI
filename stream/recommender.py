@@ -126,9 +126,10 @@ def Similarity(movieId1, movieId2,df_num):
     return 1 - spatial.distance.cosine(row1[0], row2[0])
 
 def recommendation(query,movie_entry):
-    file1 = Path("clean_data.csv")
-    file2 = Path("clean_numerical_data.csv")
-    file3= Path("clean_no_rating_data.csv")
+    base_path = Path(__file__)
+    file1 = Path(base_path, "clean_data.csv")
+    file2 = Path(base_path, "clean_numerical_data.csv")
+    file3= Path(base_path, "clean_no_rating_data.csv")
     if file1.is_file() and file2.is_file() and file3.is_file():
         df = pd.read_csv(r'{}'.format(file1), thousands=',')
         df_num = pd.read_csv(r'{}'.format(file2), thousands=',')
